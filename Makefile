@@ -20,7 +20,7 @@ GOLINT=$(LINTCMD) $(LINTOPTS)
 all: test build
 
 pr: clean build lint testv
-	$(GOCLEAN)
+	@$(MAKE) clean
 
 build:
 	$(GOBUILD) -o $(BIN_NAME)
